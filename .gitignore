@@ -1,0 +1,8 @@
+.idea
+/target
+frpc
+frpc.exe
+src/resource.rc
+data.db
+log
+frp

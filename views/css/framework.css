@@ -1,0 +1,119 @@
+:root {
+    --scroll: scroll-indicator;
+    --n1: #f7f7fa; /*background color*/
+    --n2: #f2f3f5; /*background color*/
+    --n3: #ebedf0; /*border and line color*/
+    --n4: #dcdee0; /*border and line color*/
+    --n5: #c8c9cc; /*word color(disabled word,tips words and so on)*/
+    --n6: #969799; /*word color(help word,explain words and so on)*/
+    --n7: #646566; /*word color(main words)*/
+    --n8: #323233; /*word color(main words)*/
+    --nb: #000000; /*black color*/
+    --nw: #ffffff; /*white color*/
+    --mb: #1989fa; /*action color: primary color*/
+    --mw: #576b95; /*action color: link words color*/
+    --mg: #07c160; /*action color: successful color*/
+    --mr: #ee0a24; /*action color: error color*/
+    --o4: #ed6a0c; /*action color: toast message words color*/
+    --y1: #fffbe8; /*action color: toast message background color*/
+    --cy4: #faab0c; /*action color: words helper color*/
+}
+
+.btn {
+    font-family: "Consolas", "Microsoft YaHei UI", "宋体";
+    padding: 0dip 8dip;
+    margin: 0;
+    line-height: 20dip;
+    background: transparent;
+    outline: none;
+    border: 1dip solid transparent;
+    display: inline-block;
+    behavior: button;
+    font-size: 10dip;
+    cursor: pointer;
+    overflow: hidden;
+    flow: horizontal;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+.btn:active {
+    opacity: 1;
+}
+.btn-text-default {
+    color: var(--n8);
+}
+.btn-text-primary{
+    color: var(--mb);
+}
+.btn-text-success{
+    color: var(--mg);
+}
+.btn-text-error{
+    color: var(--mr);
+}
+.btn-text-warning{
+    color: var(--o4);
+}
+.btn-primary {
+    border-color: var(--mb);
+    background-color: var(--mb);
+    color: #fff;
+}
+.btn-success {
+    border-color: var(--mg);
+    background-color: var(--mg);
+    color: #fff;
+}
+.btn-warning {
+    border-color: var(--o4);
+    background-color: var(--o4);
+    color: #fff;
+}
+.btn-error{
+    border-color: var(--mr);
+    background-color: var(--mr);
+    color: #fff;
+}
+
+@set switch {
+    :root {
+        flow: horizontal;
+        vertical-align: middle;
+        horizontal-align: start;
+        display: inline-block;
+        font-size: 12dip;
+    }
+    .switch-container{
+        width: 40dip;
+        height: 20dip;
+        background-color: #dcdfe6;
+        border-radius: 20dip;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 0 8dip #0002 inset;
+        cursor: pointer;
+        transition: background-color ease-in-out 168ms;
+    }
+    .switch-action{
+        position: absolute;
+        left: 2dip;
+        top: 2dip;
+        width: 16dip;
+        height: 16dip;
+        background-color: var(--nw);
+        border-radius: 50%;
+        box-shadow: 0 0 4px #0002;
+        transition: left ease-in-out 168ms;
+    }
+    .switch-container-open{
+        background-color: var(--mb);
+        transition: background-color ease-in-out 168ms;
+    }
+    .switch-container .action-btn-open{
+        left: 22dip;
+        transition: left ease-in-out 168ms;
+    }
+}

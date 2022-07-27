@@ -1,0 +1,81 @@
+@import "framework.css";
+
+.proxy-set {
+    width: 1*;
+    height: 1*;
+    overflow: var(--scroll);
+    background-color: var(--nw);
+    flow: vertical-warp;
+}
+
+.proxy-set-title {
+    width: 1*;
+    height: 40dip;
+    font-weight: bold;
+    font-size: 16dip;
+    padding: 0 15dip;
+    flow: vertical-warp;
+    vertical-align: middle;
+    border-bottom: 1dip solid var(--n2);
+    color: var(--n8);
+    position: relative;
+}
+.proxy-set-title .btn{
+    position: absolute;
+    right: 15dip;
+    top: 2dip;
+}
+.proxy-set-title small{
+    font-size: 12dip;
+    color: var(--mr);
+}
+.proxy-set-tab {
+    width: 1*;
+    height: 40dip;
+    flow: horizontal;
+    vertical-align: middle;
+    horizontal-align: start;
+    border-bottom: 1dip solid var(--n2);
+}
+.proxy-set-title .btn {
+    float: right;
+    margin-top: 8dip;
+}
+.proxy-set-tab-item {
+    margin-left: 15dip;
+    padding: 2dip 10dip 0 10dip;
+    height: 1*;
+    vertical-align: middle;
+    flow: horizontal;
+    text-align: center;
+    border-bottom: 2dip solid transparent;
+    cursor: pointer;
+}
+
+.proxy-set-tab-active {
+    color: var(--mb);
+    border-bottom-color: var(--mb);
+    background: linear-gradient(to top,#1989FA33,#1989FA11);
+}
+.proxy-set-tab-content{
+    width: 1*;
+    height: 1*;
+    flow: vertical-warp;
+    overflow: var(--scroll);
+    padding: 15dip;
+}
+.is-required{
+    color: var(--mr);
+    font-size: 18dip;
+    font-weight: bold;
+    margin-right: 2dip;
+}
+.td:first-child,.th:first-child {
+    width: 160dip !important;
+}
+.td:first-child:nth-child(3),.th:nth-child(3){
+    width: 60dip !important;
+}
+.td:first-child:nth-child(5),.th:nth-child(5){
+    width: 120dip !important;
+}

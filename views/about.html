@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于</title>
+    <style>
+        html{
+            border-top: 1px solid #dcdee0;
+            overflow: scroll-indicator;
+        }
+        .main {
+            padding-bottom: 10dip;
+        }
+
+        .main p {
+            width: 156dip;
+            margin: 0 auto;
+            padding: 15dip 0 0 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .main p.tl {
+            text-align: left;
+            text-indent: 10dip;
+        }
+        .wx{
+            color: green;
+        }
+        .zfb{
+            color: #1c8bf6;
+        }
+    </style>
+</head>
+<body>
+<script type="module">
+    const view = Window.this
+    const params = view.parameters
+    import {launch} from "@env"
+
+    class App extends Element {
+        render() {
+            return <div class="main">
+                <p class="tl">版本: <span style="display:inline-block">{params.version}</span></p>
+                <p class="tl">作者: <a  style="display:inline-block" href="#"
+                                         onClick={() => launch("https://github.com/fuyoo")}>fuyoo</a></p>
+                <p class="tl">主页: <a style="display:inline-block" href="#"
+                          onClick={() => launch("https://www.xsa.link")}>www.xsa.link</a>
+                </p>
+                <p>来一杯肥仔水好不好！</p>
+                <p class="wx">微信 <br/>
+                    <img src="/imgs/wx.jpeg"/></p>
+                <p class="zfb">支付宝 <br/>
+                    <img src="/imgs/zfb.jpeg"/></p>
+            </div>
+        }
+    }
+
+    document.body.patch(<App/>)
+</script>
+</body>
+</html>

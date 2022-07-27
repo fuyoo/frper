@@ -1,0 +1,372 @@
+@import "framework.css";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    flow: horizontal-warp;
+    overflow: hidden;
+    font-family: 'Microsoft YaHei UI';
+}
+
+html {
+    border-top: 1dip solid var(--n2);
+}
+
+.app {
+    width: 1*;
+    height: 1*;
+    flow: horizontal;
+}
+
+.tab {
+    width: 60dip;
+    height: 1*;
+    flow: vertical-warp;
+    vertical-align: top;
+    text-align: center;
+    border-right: 1dip solid var(--n2);
+}
+
+.tab .icon {
+    margin: 35px auto;
+}
+
+.tab .app-tab-item {
+    position: relative;
+    width: 28dip;
+    margin: 0 auto 20dip auto;
+}
+.tab .app-tab-item img{
+    width: 28dip;
+}
+
+.tab .app-tab-item .tip {
+    position: absolute;
+    left: 45dip;
+    top: 20dip;
+    margin-top: -20dip;
+    padding: 8dip 10dip;
+    border-radius: 4dip;
+    box-shadow: 0 0 10dip #0007;
+    background: var(--nb);
+    color: var(--nw);
+    white-space: nowrap;
+    display: none;
+    font-size: 12dip;
+}
+.tip::before{
+    content: "";
+    position: absolute;
+    left: -3dip;
+    top: 10dip;
+    width: 10dip;
+    height: 10dip;
+    transform: rotate(45deg);
+    background: var(--nb);
+    box-shadow: 0 0 10dip #0007;
+}
+.tab .app-tab-item:hover .tip {
+    display: block;
+}
+.tab .tab-btn {
+    width: 32dip;
+    height: 32dip;
+    cursor: pointer;
+    color: var(--n7);
+}
+
+.tab .tab-btn:hover {
+    opacity: 0.8;
+    color: var(--mb);
+}
+
+.tab .tab-btn:active {
+    opacity: 1;
+}
+
+.tab .tab-btn-active {
+    color: var(--mb);
+}
+.tab  .exit {
+    transform: rotate(90deg);
+}
+.content {
+    width: 1*;
+    height: 1*;
+    flow: vertical-warp;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .content-layout {
+    width: 1*;
+    height: 1*;
+    overflow: var(--scroll);
+    flow: horizontal-warp;
+}
+
+.content .logger-place-holder-bar {
+    width: 1*;
+    height: 24dip;
+}
+
+.content .layout {
+    width: 1*;
+    height: 1*;
+}
+
+.content .layout .layout-action {
+    height: 45dip;
+    width: 1*;
+    flow: horizontal;
+    horizontal-align: left;
+    vertical-align: middle;
+    padding: 0 8dip;
+    border-bottom: 1dip solid var(--n2);
+    position: relative;
+}
+
+.content .layout .layout-action .btn {
+    margin-left: 20dip;
+    /*position: absolute;*/
+    /*right: 15dip;*/
+    /*top: 10dip;*/
+}
+
+.content .layout .layout-datas {
+    height: 1*;
+    width: 1*;
+    overflow: var(--scroll);
+    flow: horizontal-warp;
+    padding: 10dip;
+}
+
+#logger-ctx {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: top linear 168ms;
+    width: 1*;
+    height: 1*;
+    background: var(--n1);
+    overflow: var(--scroll);
+    flow: vertical-warp;
+}
+
+#logger-ctx-action {
+    width: 1*;
+    height: 25dip;
+    flow: horizontal;
+    vertical-align: middle;
+    horizontal-align: start;
+    border-bottom: 1dip solid var(--n2);
+    overflow: hidden;
+}
+
+#logger-ctx-action .logger-title {
+    color: var(--n8);
+    margin-right: 8dip;
+    font-size: 12dip;
+}
+
+#logger-ctx-action .logger-title img {
+    width: 14dip;
+    height: 14dip;
+    vertical-align: middle;
+    margin-left: 8dip;
+}
+
+#logger-ctx-content {
+    width: 1*;
+    height: 1*;
+    overflow: var(--scroll);
+    padding: 0 10dip 10dip 10dip;
+    background-color: var(--nb);
+    color: #fff;
+}
+
+#logger-ctx-content .logger-ctx-content-row {
+    margin: 0;
+    padding: 10dip 0 0 0;
+}
+
+.table {
+    width: 1*;
+    background: var(--n2);
+    flow: vertical-warp;
+    vertical-align: top;
+    horizontal-align: start;
+    border-spacing: 1dip;
+    border: 1dip solid var(--n2);
+    color: var(--n7);
+}
+
+.tr {
+    width: 1*;
+    flow: horizontal;
+    vertical-align: middle;
+    horizontal-align: start;
+    background: var(--n2);
+    border-spacing: 1dip;
+}
+.th {
+    font-weight: bold;
+}
+
+.th, .td {
+    width: 1*;
+    height: 1*;
+    padding: 6dip 10dip;
+    background: var(--nw);
+    word-break: break-all;
+    vertical-align: top;
+}
+.tr:hover .td {
+    background-color: var(--n1);
+}
+.td .copy{
+    cursor: pointer;
+    display: inline-block;
+}
+.td .copy:hover{
+    color: var(--mb);
+}
+.td .copy:active{
+    opacity: 0.6;
+}
+.table .action {
+    width: 80dip;
+    text-align: center;
+}
+
+.set-ctx {
+    width: 1*;
+    height: 1*;
+    overflow: hidden;
+    flow: vertical-warp;
+}
+
+.set-ctx .title {
+    width: 1*;
+    height: 60dip;
+    flow: horizontal;
+    vertical-align: middle;
+    horizontal-align: start;
+    font-size: 20dip;
+    font-weight: bold;
+    padding: 0 15dip;
+    border-bottom: 1dip solid var(--n2);
+}
+
+.main-set-bar {
+    width: 1*;
+    height: 40dip;
+    flow: horizontal;
+    padding-left: 15dip;
+    border-bottom: 1dip solid var(--n2);
+}
+
+.main-set-bar .bar-item {
+    height: 1*;
+    padding: 2dip 10dip 0 10dip;
+    vertical-align: middle;
+    cursor: pointer;
+    border-bottom: 2dip solid transparent;
+    margin-right: 15dip;
+}
+
+.main-set-bar .bar-item-active {
+    border-bottom-color: var(--mb);
+    color: var(--mb);
+    background: linear-gradient(to top, #1989FA33, #1989FA11);
+}
+
+.set-ctx .body {
+    padding: 0 15dip 15dip;
+    width: 1*;
+    height: 1*;
+    overflow: var(--scroll);
+}
+
+.set-ctx input {
+    margin: 0;
+    width: 1*;
+}
+
+.set-ctx .td:nth-child(1), .set-ctx .th:nth-child(1) {
+    width: 200dip;
+}
+
+.set-ctx .td:nth-child(2), .set-ctx .th:nth-child(1) {
+    min-width: 40dip;
+}
+
+.set-ctx .td:nth-child(3), .set-ctx .th:nth-child(3) {
+    width: 100dip;
+}
+
+.set-ctx .td:nth-child(4), .set-ctx .th:nth-child(4) {
+    width: 150dip;
+    flow: horizontal;
+}
+
+.set-ctx .td:nth-child(5), .set-ctx .th:nth-child(5) {
+    width: 160dip;
+}
+
+.set-ctx .td:nth-child(6), .set-ctx .th:nth-child(6) {
+    width: 1*;
+    min-width: 120dip;
+}
+
+.set-ctx .row {
+    font-weight: bold;
+    color: var(--n8);
+    width: 1* !important;
+}
+.td .help{
+    position: relative;
+    z-index: 9;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #0003;
+    display: inline-block;
+    font-size: 10dip;
+    margin-left: 4dip;
+}
+.remark{
+    max-width: 200dip;
+    padding: 8dip;
+    position: absolute;
+    left: 22dip;
+    top: -3dip;
+    background: var(--nb);
+    border-radius: 4dip;
+    box-shadow: 0 0 20dip #0006;
+    color: var(--nw);
+    text-align: left;
+    word-break: break-all;
+    font-size: 12dip;
+    display: none;
+}
+.remark::before{
+    content: "";
+    width: 10dip;
+    height: 10dip;
+    background: var(--nb);
+    box-shadow: 0 0 20dip #0006;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -3dip;
+    top: 7dip;
+}
+.desc:hover .help{
+    z-index: 888;
+}
+.desc:hover .remark{
+    display: block;
+}
