@@ -188,6 +188,7 @@ html {
 #logger-ctx-content .logger-ctx-content-row {
     margin: 0;
     padding: 10dip 0 0 0;
+    word-break: break-all;
 }
 
 .table {

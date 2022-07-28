@@ -66,9 +66,32 @@ pub async fn run() -> Result<()> {
 }
 
 pub fn listen_frpc_logs(service: Arc<Mutex<Service>>) {
+    let service_stdout = service.clone();
     spawn(move || -> Result<()> {
         loop {
-            let stdout = service.lock().proc.stdout.take();
+            let stdout = service_stdout.lock().proc.stdout.take();
+            let element = Element::create("html")?;
+            match stdout {
+                None => {
+                    sleep(Duration::from_secs(1))
+                }
+                Some(stdout) => {
+                    let mut child_out = BufReader::new(stdout);
+                    loop {
+                        let mut line = String::new();
+                        child_out.read_line(&mut line).unwrap();
+                        if line == "" {
+                            break;
+                        }
+                        element.broadcast_event("log", true, Some(Value::from(&line)))?;
+                    }
+                }
+            };
+        }
+    });
+    spawn(move || -> Result<()> {
+        loop {
+            let stdout = service.lock().proc.stderr.take();
             let element = Element::create("html")?;
             match stdout {
                 None => {
