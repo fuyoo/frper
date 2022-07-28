@@ -1,5 +1,5 @@
 # frper
-A gui configration project for frp powered by rust and sciter(frp图形化配置客户端基于rust和sciter)
+A desktop gui project for frp powered by rust and sciter(frp桌面客户端基于rust和sciter)
 
 ## development
 
