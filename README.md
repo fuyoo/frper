@@ -1,7 +1,9 @@
 # frper
 A desktop gui project for frp powered by rust and sciter(frp桌面客户端基于rust和sciter)
 
-> free frps servers see [freefrp.net](https://freefrp.net/) 
+> free frps servers see [freefrp.net](https://freefrp.net/)
+
+**Warning: do not transfer any sensitive information through a free frps server**
 
 ## development
 
