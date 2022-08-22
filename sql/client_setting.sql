@@ -6,7 +6,7 @@ INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options"
 INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('dial_server_timeout', '10', '', '连接服务端的超时时间', '', '', 'common');
 INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('dial_server_keepalive', '7200', '', '和服务端底层 TCP 连接的 keepalive 间隔时间，单位秒', '', '负数不启用', 'common');
 INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('http_proxy', '无', '', '连接服务端使用的代理地址', '', '格式为 {protocol}://user:passwd@192.168.1.128:8080 protocol 目前支持 http、socks5、ntlm', 'common');
-INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('log_file', './frpc.log', '', '日志文件地址', '', '如果设置为 console，会将日志打印在标准输出中', 'common');
+INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('log_file', '', '', '日志文件地址', '', '如果设置为 console，会将日志打印在标准输出中', 'common');
 INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('log_level', 'info', '', '日志等级', 'trace,debug,info,warn,error', '格式为 {protocol}://user:passwd@192.168.1.128:8080 protocol 目前支持 http、socks5、ntlm', 'common');
 INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('log_max_days', '3', '', '日志文件保留天数', '', '', 'common');
 INSERT INTO "client_setting" ("key", "default_value", "value", "desc", "options", "remark", "set_type") VALUES ('disable_log_color', 'false', '', '禁用标准输出中的日志颜色', 'false,true', '', 'common');
