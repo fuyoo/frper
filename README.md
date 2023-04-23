@@ -21,7 +21,7 @@ A desktop gui project for frp powered by rust and sciter(frp桌面客户端基�
 
 + Choose a free frps server domain name from [freefrp.net](https://freefrp.net/) and copy it.
 + On you domain name dns setting. add a dns record, with CNAME type, content is frps domain name from copied.
-  and sub domain name is what any you want. alos you can provide a wildcard domain name such as "*.frp" or any others.
+  and sub domain name is what any you want. also you can provide a wildcard domain name such as "*.frp" or any others.
 
 ##  Screenshot
 
